@@ -4,12 +4,28 @@ def Menu():
     print("\n-------------------------------------------------------")
     print("\n1-Soma dos digitos de um numero")
     print("\n2-Soma ponderada dos digitos de um numero")
-    print("\n3-sair")
+    print("\n3-Detalhes")
+    print("\n4-Sair")
     print("\n-------------------------------------------------------")
     escolha=int(input("\nEscolha uma das opcoes acima: "))
     return escolha
   except:
-    print("\nOcorreu um erro no menu de selecao")
+    print("\nDigitou algo fora das opcoes disponiveis,ou ocorreu algum erro, tente novamente mais tarde.")
+
+#funcao de detalhes das funcoes existentes para os usuarios
+def Detalhes():
+  try:
+    print("\n--------------------------------------------------------")
+    opcao=str(input("\nDeseja detalhes de qual metodo: \n\t\t\t1-Soma dos digitos de um numero\n\t\t\t2-Soma ponderada dos digitos de um numero\n: "))
+    if opcao=="1":
+      print("\nA soma de digitos de um numero funciona da seguinte maneira:\n\tApos voce digitar um numero por exemplo: 23, vai se pegar cada digito do numero, nesse exemplo seriam o 2 e o 3, e somaria ambos, no caso resultado em 5")
+    elif opcao=="2":
+      print("\nA soma ponderada de digitos de um numero funciona da seguinte forma:\n\tApos voce digitar um numero por exemplo: 150, vai se pegar cada digito do numero, nesse caso o 1, 5 e o 0(zero), e vai primeiro multiplicar cada um deles pelo valor de sua posicao, nesse caso: \n\t1*1=1 e 5*2=10 e 0*3=0 e depois vai se somar os resultados: \n\t1 + 10 + 0 = 11")
+    else:
+      print("opcao nao disponivel, tente mais tarde baseado nas opcoes existentes.")
+    
+  except:
+    print("\nOcorreu algum erro durante o detalhamento, tente novamente mais tarde.")
 
 #funcao para realizar a soma ponderada dos digitos do numero
 def Somando_digitos_ponderada():
@@ -74,6 +90,6 @@ while True:
   elif escolhido==2:
     Somando_digitos_ponderada()
   elif escolhido==3:
-    break
-  else:
-    print("\nDigitou algo fora das opcoes disponiveis, tente novamente mais tarde.")
+    Detalhes()
+  elif escolhido==4:
+    break  
