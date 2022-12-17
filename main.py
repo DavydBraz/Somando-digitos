@@ -2,10 +2,11 @@
 def Menu():
   try:
     print("\n-------------------------------------------------------")
-    print("\n1-Soma dos digitos de um numero")
-    print("\n2-Soma ponderada dos digitos de um numero")
-    print("\n3-Detalhes")
-    print("\n4-Sair")
+    print("\nEscolha uma das opcoes abaixo:")
+    print("\n\t1-Soma dos digitos de um numero")
+    print("\n\t2-Soma ponderada dos digitos de um numero")
+    print("\n\t3-Detalhes")
+    print("\n\t4-Sair")
     print("\n-------------------------------------------------------")
     escolha=int(input("\nEscolha uma das opcoes acima: "))
     return escolha
@@ -66,7 +67,7 @@ def Somando_digitos():
 
      #variavel que vai ser usada para guardar e ser exibida mostrando o resultado
     resultado=0
-    entrada=str(input("\nValor que deseja realizar o processo de soma dos seus digitos: "))
+    entrada=str(input("\nQual o valor que deseja realizar o processo de soma dos seus digitos: "))
     #laco baseado no tamanho da entrada digitada pelo usuario
     for j in range(len(entrada)):
       #percorrendo para verificar se os caracteres sao digitos ou nao, se for o contador vai sendo somado
